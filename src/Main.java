@@ -1,15 +1,43 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        int [] arrayIntegers = {22_222, 15_000, 17_000, 47_000, 37_500};
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        //Task 1
+        int totalSum = 0;
+        for (int i : arrayIntegers) {
+            totalSum += i;
+        }
+        System.out.println("Сумма трат за месяц составила " + totalSum + " рублей");
+
+        System.out.println();
+        //Task 2
+        int minElement = 2_000_000_000;
+        int maxElement = -1;
+        for (int i : arrayIntegers) {
+            if (i < minElement) {
+                minElement = i;
+            }
+            if (i > maxElement) {
+                maxElement = i;
+            }
+        }
+        System.out.println("Минимальная сумма трат за неделю составила " + minElement + " рублей.\n" +
+                "Максимальная сумма трат за неделю составила " + maxElement + " рублей");
+
+        System.out.println();
+        //Task 3
+        double averageValue = 0;
+        for (int i : arrayIntegers) {
+            averageValue += i;
+        }
+        averageValue /= 5;
+        System.out.println("Средняя сумма трат за месяц составила " + averageValue + " рублей");
+
+        System.out.println();
+        //Task 4
+        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = reverseFullName.length-1; i >= 0; i--) {
+            System.out.print(reverseFullName[i]);
         }
     }
 }
